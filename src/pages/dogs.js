@@ -1,12 +1,10 @@
 import * as React from 'react'
-import { Layout } from '../../layout/default'
 import { Link } from 'gatsby'
 import fetch from 'node-fetch'
-import { StaticImage } from 'gatsby-plugin-image'
 
 export default function SSRPage({ serverData }) {
   return (
-    <Layout>
+    <>
       <h1>Dogs!</h1>
       <ul>
         {Object.keys(serverData?.message).map((key) => (
@@ -24,7 +22,7 @@ export default function SSRPage({ serverData }) {
           </li>
         ))}
       </ul>
-    </Layout>
+    </>
   )
 }
 
